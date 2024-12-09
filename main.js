@@ -27,9 +27,17 @@ interaction.addEventListener('animationend', jumpHandler)
 
 // Stap 1: querySelector
 // let bibberLink = document.querySelector...
+ let frontend = document.querySelector('a:nth-of-type(1)')
 
 // Stap 2: addEventListener
 // bibberLink.addEventListener...
+frontend.addEventListener('dblclick', bibberen)
+
+function bibberen() {
+
+  frontend.classList.toggle('bibberend-dingetje')
+}
 
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-// bibberLink.classList.toggle...
+// bibberLink.classList.toggle... 
+
