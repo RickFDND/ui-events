@@ -61,7 +61,7 @@ let and = document.querySelector('a:nth-of-type(3)')
 
 and.addEventListener ('click', function(event){
   event.preventDefault();
-  and.textContent = 'Rick';
+  and.textContent = and.textContent + 'Rick';
 });
 
 
