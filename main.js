@@ -27,6 +27,9 @@ interaction.addEventListener('animationend', jumpHandler)
 
 // Stap 1: querySelector
 // let bibberLink = document.querySelector...
+
+//frontend
+
  let frontend = document.querySelector('a:nth-of-type(1)')
 
 // Stap 2: addEventListener
@@ -41,3 +44,27 @@ function bibberen() {
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // bibberLink.classList.toggle... 
 
+//design
+let design = document.querySelector('a:nth-of-type(2)')
+
+document.addEventListener('keydown', grow)
+
+function grow(event) {
+  if(event.key == 'q') {
+    design.classList.toggle('ease-out')
+  }
+}
+
+//and
+
+let and = document.querySelector('a:nth-of-type(3)')
+
+and.addEventListener ('click', function(event){
+  event.preventDefault();
+  and.textContent = 'Rick';
+});
+
+
+// Volgende knop gaat iets toevoegen aan de knop zelf..
+// Als Enter op knop 3, moet er 'Rick' toegevoegd worden aan de knop..
+// knop.textContent = knop.textContent + 'Rick'

@@ -108,3 +108,29 @@ a:nth-of-type(12) {
   animation-duration: 1.2s;
   animation-iteration-count: 1;  
 }
+
+/* design */
+.ease-out{
+  background-color: red;
+  animation-name: kleinNaarGroot;
+  animation-duration: 1s;
+}
+
+@keyframes kleinNaarGroot {
+  0% {
+    transform: scale(0)
+  }
+  33% {
+    transform: scale(25%);
+  }
+  66%{
+    transform: scale(60%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.Rick{
+  background-color: red;
+}
