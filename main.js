@@ -44,18 +44,41 @@ function bibberen() {
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // bibberLink.classList.toggle... 
 
-//design
+//design, development, sprint5, fix en
 let design = document.querySelector('a:nth-of-type(2)')
-
+let development = document.querySelector('a:nth-of-type(4)')
+let sprint5 = document.querySelector('a:nth-of-type(5)')
+let fix = document.querySelector('a:nth-of-type(6)')
+let the = document.querySelector('a:nth-of-type(7)')
 document.addEventListener('keydown', grow)
 
 function grow(event) {
   if(event.key == 'q') {
     design.classList.toggle('ease-out')
   }
+  
+  if(event.key == 'r'){
+    development.textContent = 'R'
+  }
+
+  if (event.key == 'i' && development.textContent === 'R') {
+    sprint5.textContent = 'I'
+  }
+
+  if (event.key == 'c' && sprint5.textContent === 'I') {
+    fix.textContent = 'C'
+  }
+
+  if (event.key == 'k' && fix.textContent === 'C') {
+    the.textContent = 'K'
+  }
 }
 
 //and
+
+// Volgende knop gaat iets toevoegen aan de knop zelf..
+// Als Enter op knop 3, moet er 'Rick' toegevoegd worden aan de knop..
+// knop.textContent = knop.textContent + 'Rick'
 
 let and = document.querySelector('a:nth-of-type(3)')
 
@@ -63,8 +86,3 @@ and.addEventListener ('click', function(event){
   event.preventDefault();
   and.textContent = and.textContent + 'Rick';
 });
-
-
-// Volgende knop gaat iets toevoegen aan de knop zelf..
-// Als Enter op knop 3, moet er 'Rick' toegevoegd worden aan de knop..
-// knop.textContent = knop.textContent + 'Rick'
